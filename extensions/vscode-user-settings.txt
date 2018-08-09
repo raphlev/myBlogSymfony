@@ -1,0 +1,20 @@
+ctrl+shift+x>ext:twig>Install Twig-Pack
+Press Shift+Ctrl+P
+Pick Extensions: Install Extension
+Find vscode-twig-pack
+
+{
+	"window.zoomLevel": 1,
+	"terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact",	
+		"vue-html": "html",
+		"plaintext": "jade",
+		"twig": "html"
+	},
+
+	"editor.wordWrap": "bounded",
+	"materialTheme.fixIconsRunning": false,
+	"workbench.iconTheme": "eq-material-theme-icons-light"
+
+}

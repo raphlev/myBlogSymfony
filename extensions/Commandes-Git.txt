@@ -1,0 +1,18 @@
+
+<<GitHub>>
+Create new public repo myBlogSymfony with default value
+
+<<LOCAL>>
+cd <projects-root>
+mkdir myBlogSymfony
+cd myBlogSymfony/
+git init    > Initialized empty Git repository in Z:/Symfony/Code/myBlogSymfony/.git/
+git status
+git add .
+git status
+git commit -m "This is my first commit!"
+
+git remote add origin https://github.com/raphlev/myBlogSymfony.git
+git push -u origin master
+or
+git push origin my-new-branch
