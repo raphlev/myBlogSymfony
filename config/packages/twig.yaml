@@ -2,3 +2,5 @@ twig:
     paths: ['%kernel.project_dir%/templates']
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    # see http://symfony.com/doc/current/form/bootstrap4.html
+    form_themes: ['bootstrap_4_layout.html.twig']
