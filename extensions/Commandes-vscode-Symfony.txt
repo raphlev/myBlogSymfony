@@ -22,7 +22,7 @@ php bin/console doctrine:database:create
 Créer class Entity (wizard pour aide a la creation d'une class datamodel):
 php bin/console make:entity
 
-Créer class Migration (wizard pour aide a la creation d'une class migration):
+Créer class Migration (wizard pour aide a la creation d'une class migration - vérifie automatiquement les entités presentes et cree un nouveau fichier si necessaire):
 php bin/console make:migration
 
 Migration mettre a jour une BDD à partir des class Migration existantes:
