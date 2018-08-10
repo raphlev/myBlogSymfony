@@ -6,6 +6,11 @@ composer -V
 CTRL+Shift+P -> Preferences Open user setting
 CTRL+SHIFT+X -> Extendions
 
+Pour régénérer base de données propre
+- dans phpadmin: selectionner toutes les tables de la BDD et Supprimer (drop)
+- executer les 2 commandes php bin/console doctrine:migrations:migrate + php bin/console doctrine:fixtures:load
+
+
 Creer projet symfony: (ou ouvrir repertoire projet existant si deja cree)
 cd <repertoire root>
 composer create-project symfony/website-skeleton New_Project
@@ -39,3 +44,9 @@ php bin/console doctrine:fixtures:load
 
 Créer Formulaire (wizard pour aide a la creation d'une class formulaire):
 php bin/console make:form
+
+Faker - Libraririe php pour créer de la fausse donnée - voir github faker https://github.com/fzaninotto/Faker
+composer require fzaninotto/faker --dev
+
+Créer class controller (wizard pour aide a la creation d'une class controller):
+php bin/console make:controller
