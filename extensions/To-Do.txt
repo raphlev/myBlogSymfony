@@ -1,0 +1,9 @@
+Done
+- Ajout de commentaire: recupération du username pour l'auteur.
+
+To-Do
+- https://symfony.com/doc/current/security/form_login.html
+  How to Customize Redirect After Form Login : cf google..
+  But: apres login depuis page d'un article, revenir sur la page de l'article.
+  But: apres Déconnexion depuis page d'un article, revenir sur la page de l'article.
+- performance issue with wampserver+symfony: see google..

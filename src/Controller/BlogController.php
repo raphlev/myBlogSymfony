@@ -14,10 +14,18 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
 class BlogController extends Controller
 {
+
+    private $tokenStorage;
+ 
+    public function __construct(TokenStorageInterface $tokenStorage)
+    {
+        $this->tokenStorage = $tokenStorage;
+    }
+
     /**
      * @Route("/blog", name="blog")
      */
@@ -143,8 +151,16 @@ class BlogController extends Controller
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
+
+            $user = null;
+            $token = $this->tokenStorage->getToken();
+            if ($token !== null) {
+                $user = $token->getUser();
+            }
+
             $comment->setCreatedAt(new \DateTime())
-                    ->setArticle($article);
+                    ->setArticle($article)
+                    ->setAuthor($user->getUsername());
             $manager->persist($comment);
             $manager->flush();
 

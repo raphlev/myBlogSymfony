@@ -16,6 +16,11 @@
         <div class="form-group">
             <button type="submit" class="btn btn-success">Connexion !</button>
         </div>
+{#
+        {% set referer = app.request.server.get('http-referer')|default('/') %}
+        <input type="hidden" name="_target_path" value="{{ referer }}" />
+#}
+
     </form>
 
 {% endblock %}
