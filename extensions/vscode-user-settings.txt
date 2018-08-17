@@ -3,7 +3,7 @@ Press Shift+Ctrl+P
 Pick Extensions: Install Extension
 Find vscode-twig-pack
 Find php namespace resolver --> ctrl+alt+i  = extension vscode qui permet de retrouver les namespaces
-
+Search for File: Press Shift+Ctrl+P  +  backslash to remove >
 {
 	"window.zoomLevel": 1,
 	"terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",

@@ -16,3 +16,9 @@ git remote add origin https://github.com/raphlev/myBlogSymfony.git
 git push -u origin master
 or
 git push origin my-new-branch
+
+
+quick:
+git add .
+git commit -m "This is my xx commit!"
+git push -u origin master
