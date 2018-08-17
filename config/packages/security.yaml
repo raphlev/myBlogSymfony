@@ -1,14 +1,36 @@
 security:
+    encoders:
+        App\Entity\User:
+            # algo pour hacher mot de passe
+            algorithm: bcrypt
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+
+    # Les providers de données: permet de dire comment fournir les données utilisateurs - on veut fournir le formulaire de login pour se connecter a la base , on créé notre proper provider qu'on nomme in_database et on lui dit d'aller chercher le champs email sur l'entité User
     providers:
         in_memory: { memory: ~ }
+        in_database:
+            entity:
+                class: App\Entity\User
+                property: email
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
             anonymous: true
+            # on protege l'application main (tout mon site) par notre propre provider
+            provider: in_database
 
+            # mode d'authentification traditionnel form_login
+            form_login:
+                # login path avec nom de la route du formulaire de connection
+                login_path: security_login
+                # check path pour vérifier les infos du formulaires de login - on peut avoir le meme route/formulaire
+                check_path: security_login
+
+            logout:
+                path: security_logout
+                target: blog
             # activate different ways to authenticate
 
             # http_basic: true

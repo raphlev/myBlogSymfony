@@ -2,6 +2,7 @@ ctrl+shift+x>ext:twig>Install Twig-Pack
 Press Shift+Ctrl+P
 Pick Extensions: Install Extension
 Find vscode-twig-pack
+Find php namespace resolver --> ctrl+alt+i  = extension vscode qui permet de retrouver les namespaces
 
 {
 	"window.zoomLevel": 1,
